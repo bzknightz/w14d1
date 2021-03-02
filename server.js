@@ -17,14 +17,11 @@ app.use(methodOverride("_method"));
 app.use("/store", storeController);
 
 // connect to database
-mongoose.connect(
-  "mongodb+srv://mongostoreuser:mongouser123@mongostore.ymh57.mongodb.net/storecrud?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: true,
-  }
-);
+mongoose.connect(process.env.mongoURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: true,
+});
 
 mongoose.connection.once("open", () => {
   console.log("connected to mongo");

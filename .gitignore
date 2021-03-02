@@ -103,9 +103,5 @@ dist
 # TernJS port file
 .tern-port
 
-# ignore mongodb connection file
-/server.js
-
-# ignore package file
-/package.json
-/package-lock.json
+# ignore .env file
+.env
