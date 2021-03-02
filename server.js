@@ -1,10 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
+const dotenv = require("dotenv");
 
 const storeController = require("./controller/store.js");
 
 const app = express();
+dotenv.config();
 
 // PORT
 const PORT = process.env.PORT || 3000;
