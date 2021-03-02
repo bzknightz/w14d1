@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mongoose Store</title>
+  </head>
+  <body>
+    <nav><a href="/store/new">Add a new product</a></nav>
+    <h1>SHOP</h1>
+    <div id="container">
+    <% product.forEach((product,index)=>{ %>
+    <div id="items">
+      <h3><%=product.name%></h3>
+      <a href="/store/<%=product.id%>"><img src="<%=product.img%>" alt="" width="150px" /></a></br>
+      Price: $<%=product.price%>
+    </div>
+    <% }) %>
+    </div>
+  </body>
+</html>
